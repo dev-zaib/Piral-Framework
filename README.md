@@ -55,20 +55,33 @@ npx pilet debug
 Visit [Piral Cloud Services](https://portal.piral.cloud/) and sign up with Microsoft.
 
 1. **Creating a Feed in the feed service:**
-   - Follow the steps on the portal.
+    - Create New Feed
+    ![Alt text](<Screenshot from 2024-01-24 12-14-02.png>)
+    ![Alt text](<Screenshot from 2024-01-24 12-20-11.png>)
+    
+    - Now You can upload Micro-Frontend or CLI to publish Your Micro-Frontend
+    ![Alt text](<Screenshot from 2024-01-24 12-22-49.png>)
+
+    - Manage API key by Generating New API
+    ![Alt text](<Screenshot from 2024-01-24 12-23-15.png>)
 
 2. **Create an API Key required for publishing the pilet:**
    - Generate an API key on the portal.
+    ![Alt text](<Screenshot from 2024-01-24 12-24-04.png>)
+    ![Alt text](<Screenshot from 2024-01-24 12-25-04.png>)
 
+   - Successfully Generate API key 
+    ![Alt text](<Screenshot from 2024-01-24 12-25-24.png>)
 3. **Publishing a Pilet to the Feed Service:**
    ```bash
-   npx pilet publish --fresh --url https://feed.piral.cloud/api/v1/pilet/my-tutorial-feed --api-key <your-api-key>
+   npx pilet publish --fresh --url https://feed.piral.cloud/api/v1/pilet/my-feed-name --api-key <your-api-key>
    ```
 
 4. **Configure the Piral Instance:**
    Update your Piral instance to fetch pilets from the feed service.
    ```javascript
-   const feedUrl = 'https://feed.piral.cloud/api/v1/pilet/my-tutorial-feed';
+   const feedUrl = 'https://feed.piral.cloud/api/v1/pilet/my-feed-name';
    ```
 
-Now you have successfully set up your Piral micro frontend project! Feel free to reach out if you have any questions.
+   ## Disadvantage
+   - The framework may incur costs after a certain number of published pilets, which could impact developers on a budget or smaller projects.
